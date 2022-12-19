@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+
+
+
+    <!-- script for drag and drop -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body id="body">
+    <div class="bg-container">
+        <div class="light-background-container">
+            <picture>
+                <source media="(min-width:475px )" srcset="images/bg-desktop-light.jpg">
+                <img src="images/bg-mobile-light.jpg" alt="bg-mobile-light">
+            </picture>
+
+        </div>
+        <div class="dark-background-container inactive">
+            <picture>
+                <source media="(min-width:475px )" srcset="images/bg-desktop-dark.jpg">
+                <img src="images/bg-mobile-dark.jpg" alt="bg-mobile-light">
+            </picture>
+        </div>
+
+    </div>
+    <div class="main-container">
+        <p class="note">Drag and drop to reorder the list</p>
+        <header>
+            <h1>TODO</h1>
+            <button class="btn">
+                <img src="images/icon-moon.svg" alt="icon-moon" id="icon-moon">
+                <img src="images/icon-sun.svg" alt="icon-sun" id="icon-sun" class="inactive">
+            </button>
+        </header>
+        <main>
+            <div class="input-container">
+                <form id="form">
+                    <input type="text" name="text" id="text" placeholder="Create a new todo...">
+                </form>
+
+            </div>
+            <div class="todo-container-main">
+                <!-- todo-details -->
+                <div class="todo">
+                    <!-- <div class="whole-todo">
+                        <span class="circle-todo">
+                            <img src="images/icon-check.svg" alt="icon-check">
+                        </span>
+                        <p class="todo-text ">Complete online JavaScript course</p>
+                    </div> -->
+                </div>
+                <hr>
+
+
+
+                <!-- todo-footer -->
+                <div class="todo-footer">
+                    <p><span id="items-left">No</span> items left</p>
+                    <div class="selectors">
+
+                        <input type="radio" name="radio" id="all" checked >
+                        <label for="all" >ALL</label>
+
+
+                        <input type="radio" name="radio" id="active">
+                        <label for="active">Active</label>
+                        
+                        <input type="radio" name="radio" id="completed">
+                        <label for="completed">Completed</label>
+                    </div>
+                    <div>
+                        <button id="clear-completed">Clear Completed</button>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
